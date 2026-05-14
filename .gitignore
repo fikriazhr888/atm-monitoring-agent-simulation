@@ -1,0 +1,24 @@
+# Build folders
+
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# Test results
+TestResults/
+
+# Runtime storage
+storage/
+
+# User-specific files
+*.user
+*.suo
+
+# Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Logs
+*.log

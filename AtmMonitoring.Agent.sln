@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtmMonitoring.Agent", "AtmMonitoring.Agent\AtmMonitoring.Agent.csproj", "{7EB4ADC0-2196-4009-A068-18D12ACFC025}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtmMonitoring.Tests", "AtmMonitoring.Tests\AtmMonitoring.Tests.csproj", "{6BA2569F-6717-4A45-AD44-8DE6B461543C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B97EDD3E-9F21-4EFF-ABB7-6B0FF9DC196C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LEARNING_NOTES.md = LEARNING_NOTES.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EB4ADC0-2196-4009-A068-18D12ACFC025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB4ADC0-2196-4009-A068-18D12ACFC025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB4ADC0-2196-4009-A068-18D12ACFC025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB4ADC0-2196-4009-A068-18D12ACFC025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA2569F-6717-4A45-AD44-8DE6B461543C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA2569F-6717-4A45-AD44-8DE6B461543C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA2569F-6717-4A45-AD44-8DE6B461543C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA2569F-6717-4A45-AD44-8DE6B461543C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3EA648D3-5B06-43D4-89AC-3DAFCD9593AA}
+	EndGlobalSection
+EndGlobal
