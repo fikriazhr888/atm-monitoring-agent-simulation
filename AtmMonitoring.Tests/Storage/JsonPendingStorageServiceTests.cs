@@ -9,7 +9,6 @@ public class JsonPendingStorageServiceTests
     [Fact]
     public async Task SavePendingAsync_Should_Save_Status()
     {
-        // Arrange
         var service = new JsonPendingStorageService();
 
         var status = new AtmStatus
@@ -25,12 +24,9 @@ public class JsonPendingStorageServiceTests
             Message = "Test pending"
         };
 
-        // Act
         await service.SavePendingAsync(status);
 
         var pending = await service.GetPendingAsync();
-
-        // Assert
         pending.Should().Contain(x => x.StatusId == status.StatusId);
     }
 

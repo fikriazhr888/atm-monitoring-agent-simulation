@@ -24,7 +24,8 @@ public class MockMonitoringClient : IMonitoringClient
             };
         }
 
-        //retry pending
+        //simulasi network failure
+        //pengiriman monitoring yang tidak selalu berhasil
         var networkAvailable = _random.Next(1, 5) != 1;
 
         if (!networkAvailable)

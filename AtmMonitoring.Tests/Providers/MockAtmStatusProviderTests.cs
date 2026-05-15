@@ -8,13 +8,10 @@ public class MockAtmStatusProviderTests
     [Fact]
     public async Task GetStatusAsync_Should_Return_Valid_Status()
     {
-        // Arrange
         var provider = new MockAtmStatusProvider();
 
-        // Act
         var result = await provider.GetStatusAsync();
 
-        // Assert
         result.Should().NotBeNull();
         result.StatusId.Should().NotBeNullOrWhiteSpace();
         result.TerminalId.Should().Be("ATM-0001");

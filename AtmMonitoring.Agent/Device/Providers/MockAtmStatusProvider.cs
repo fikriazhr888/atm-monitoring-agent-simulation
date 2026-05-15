@@ -18,13 +18,18 @@ public class MockAtmStatusProvider : IAtmStatusProvider
             "OFFLINE"
         };
 
+
+        // Random Status
         var selectedStatus = overallStatuses[_random.Next(overallStatuses.Length)];
         //var selectedStatus = "OFFLINE";
         //var selectedStatus = "HEALTHY";
 
         return new AtmStatus
         {
+
+            //disini menggunakan GUID untuk menghindari data duplikat
             StatusId = $"STAT-{Guid.NewGuid()}",
+
             TerminalId = "ATM-0001",
             Timestamp = DateTime.Now,
             NetworkStatus = selectedStatus == "OFFLINE" ? "OFFLINE" : "ONLINE",

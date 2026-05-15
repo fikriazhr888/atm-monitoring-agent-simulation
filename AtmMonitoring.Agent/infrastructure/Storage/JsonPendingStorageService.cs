@@ -13,9 +13,10 @@ public class JsonPendingStorageService : IPendingStorageService
         var directory = Path.GetDirectoryName(_filePath);
 
         Console.WriteLine($"Creating directory: {directory}");
-
+        //pada proses ini akan membuat folder bernama storage untuk menampung data pending json.
         if (!string.IsNullOrEmpty(directory))
         {
+            //seaindainya folder sudah ada, CreateDirectory tidak akan membuat folder lagi, do nothing
             Directory.CreateDirectory(directory);
         }
     }
@@ -24,8 +25,12 @@ public class JsonPendingStorageService : IPendingStorageService
     {
         var pendingStatuses = await GetPendingAsync();
 
+
+        //disini saya menggunnakan statusId untuk menghindari duplikat data yang akan di save
+        
         var exists = pendingStatuses.Any(x => x.StatusId == status.StatusId);
 
+        //jika true, maka akan ke return.
         if (exists)
         {
             return;
@@ -80,7 +85,8 @@ public class JsonPendingStorageService : IPendingStorageService
             {
                 WriteIndented = true
             });
-
+        //ini proses untuk menghapus remove pending
+        //dengan cara get data kecuali data yang sudah sukses, lalu di rewrite
         await File.WriteAllTextAsync(_filePath, json);
     }
 }

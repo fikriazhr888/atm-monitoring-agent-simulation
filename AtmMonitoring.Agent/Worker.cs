@@ -25,6 +25,7 @@ public class Worker : BackgroundService
     {
         _logger.LogInformation("ATM Monitoring Agent Started");
 
+        //retry pending status dilakukan dahulu agar mencegah penumpukan data
         await RetryPendingStatusesAsync(stoppingToken);
         while (!stoppingToken.IsCancellationRequested)
         {
@@ -48,6 +49,7 @@ public class Worker : BackgroundService
                         "Send Failed: {Message}",
                         sendResult.Message);
 
+                    // jika status gagal maka tidak dibuang, tetapi disimpang sementara agar bisa dikirim ulang di cycle berikutnya.
                     await _pendingStorageService.SavePendingAsync(status);
 
                     _logger.LogWarning(
@@ -98,6 +100,7 @@ public class Worker : BackgroundService
 
             if (result.Status == SendStatus.Success)
             {
+                //remove pending
                 await _pendingStorageService.RemovePendingAsync(
                     pendingStatus.StatusId);
 
