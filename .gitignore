@@ -9,9 +9,6 @@ obj/
 # Test results
 TestResults/
 
-# Runtime storage
-storage/
-
 # User-specific files
 *.user
 *.suo

@@ -1,0 +1,46 @@
+[
+  {
+    "StatusId": "STAT-7a5fef50-42ce-42f3-b1e8-5ca44ac13699",
+    "TerminalId": "ATM-0001",
+    "Timestamp": "2026-05-15T04:36:00.2567611+07:00",
+    "NetworkStatus": "OFFLINE",
+    "CashStatus": "NORMAL",
+    "PrinterStatus": "NORMAL",
+    "CardReaderStatus": "NORMAL",
+    "OverallStatus": "OFFLINE",
+    "Message": "ATM network offline"
+  },
+  {
+    "StatusId": "STAT-f92f4d30-603f-4884-ac9f-1cef0d7609c7",
+    "TerminalId": "ATM-0001",
+    "Timestamp": "2026-05-15T04:37:09.4951147+07:00",
+    "NetworkStatus": "OFFLINE",
+    "CashStatus": "NORMAL",
+    "PrinterStatus": "NORMAL",
+    "CardReaderStatus": "NORMAL",
+    "OverallStatus": "OFFLINE",
+    "Message": "ATM network offline"
+  },
+  {
+    "StatusId": "STAT-00ff6362-65ce-4f10-bc59-5a6b29d53709",
+    "TerminalId": "ATM-0001",
+    "Timestamp": "2026-05-15T04:42:04.6060667+07:00",
+    "NetworkStatus": "ONLINE",
+    "CashStatus": "NORMAL",
+    "PrinterStatus": "NORMAL",
+    "CardReaderStatus": "NORMAL",
+    "OverallStatus": "HEALTHY",
+    "Message": "ATM operating normally"
+  },
+  {
+    "StatusId": "STAT-11a23065-0d69-448c-a75d-3755c352534a",
+    "TerminalId": "ATM-0001",
+    "Timestamp": "2026-05-15T04:42:27.6817082+07:00",
+    "NetworkStatus": "ONLINE",
+    "CashStatus": "NORMAL",
+    "PrinterStatus": "NORMAL",
+    "CardReaderStatus": "NORMAL",
+    "OverallStatus": "HEALTHY",
+    "Message": "ATM operating normally"
+  }
+]
