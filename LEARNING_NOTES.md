@@ -4,9 +4,6 @@
 
 Selama mengerjakan coding test ini, saya mempelajari dan memperdalam beberapa konsep seperti:
 
-* .NET Worker Service
-* Retry mechanism
-* Local pending storage menggunakan JSON
 * Unit testing menggunakan xUnit
 
 ---

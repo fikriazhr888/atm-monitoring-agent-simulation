@@ -25,13 +25,13 @@ public class Worker : BackgroundService
     {
         _logger.LogInformation("ATM Monitoring Agent Started");
 
-        //retry pending status dilakukan dahulu agar mencegah penumpukan data
-        await RetryPendingStatusesAsync(stoppingToken);
+        
         while (!stoppingToken.IsCancellationRequested)
         {
             try
             {
-
+                //retry pending status dilakukan dahulu agar mencegah penumpukan data
+                await RetryPendingStatusesAsync(stoppingToken);
 
                 var status = await _atmStatusProvider.GetStatusAsync();
 
