@@ -18,7 +18,6 @@ public class Worker : BackgroundService
         _monitoringClient = monitoringClient;
         _pendingStorageService = pendingStorageService;
     }
-
     
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -60,15 +59,29 @@ public class Worker : BackgroundService
                 _logger.LogInformation(
                     """
                     =========================================================
-                    Status Collected:
-                    StatusId: {StatusId}
-                    TerminalId: {TerminalId}
-                    OverallStatus: {OverallStatus}
-                    Message: {Message}
+                        ATM STATUS PAYLOAD
+
+                        StatusId        : {StatusId}
+                        TerminalId      : {TerminalId}
+                        Timestamp       : {Timestamp}
+
+                        NetworkStatus   : {NetworkStatus}
+                        CashStatus      : {CashStatus}
+                        PrinterStatus   : {PrinterStatus}
+                        CardReaderStatus: {CardReaderStatus}
+
+                        OverallStatus   : {OverallStatus}
+                        Message         : {Message}
                     =========================================================
                     """,
+
                     status.StatusId,
                     status.TerminalId,
+                    status.Timestamp,
+                    status.NetworkStatus,
+                    status.CashStatus,
+                    status.PrinterStatus,
+                    status.CardReaderStatus,
                     status.OverallStatus,
                     status.Message
                 );
