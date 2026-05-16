@@ -14,7 +14,7 @@ namespace AtmMonitoring.Agent
 
             //Register 
             builder.Services.AddSingleton<IAtmStatusProvider, MockAtmStatusProvider>();
-            builder.Services.AddSingleton<IPendingStorageService, JsonPendingStorageService>();
+            builder.Services.AddSingleton<IPendingStorageService, SqlitePendingStorageService>();
             builder.Services.AddSingleton<IMonitoringClient, MockMonitoringClient>();
 
             builder.Services.AddHostedService<Worker>();
